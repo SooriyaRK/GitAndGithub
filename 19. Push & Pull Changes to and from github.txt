@@ -1,0 +1,95 @@
+Github Authentication to connect to remote repo 
+---------------------------------------------------> 
+GitHub CLI
+GitHub CLI will automatically store your Git credentials for you when you choose HTTPS as your 
+preferred protocol for Git operations and answer "yes" to the prompt asking if you would like to 
+authenticate to Git with your GitHub credentials.
+
+Install GitHub CLI on macOS, Windows, or Linux.
+In the command line, enter gh auth login, then follow the prompts.
+When prompted for your preferred protocol for Git operations, select HTTPS.
+When asked if you would like to authenticate to Git with your GitHub credentials, enter Y. (Also we need to set
+path for system variables (environment variables) - git/bin path)
+
+
+To push an existing repository from an command line 
+----------------------------------------------------------> 
+After creating remote repository in github, we will be getting an url. 
+
+To push changes from local repository in our computer to remote repository on github 
+In command line, go to repository folder  
+
+$ git remote add origin repository-url     - sets up the connection to remote repository for our local 
+repository 
+
+origin - any name we want 
+
+To upload the contents of the local repository to remote repository 
+$ git push -u origin master     - to push the code from local to repo 
+
+To pull the changes from github to local repository 
+$ git pull  
+
+
+
+
+
+
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/GIT AND GITHUB (master)
+$ git remote add origin https://github.com/SooriyaRK/GitAndGithub.git
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/GIT AND GITHUB (master)
+$ git remote
+origin
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/GIT AND GITHUB (master)
+$ git remote -v
+origin  https://github.com/SooriyaRK/GitAndGithub.git (fetch)
+origin  https://github.com/SooriyaRK/GitAndGithub.git (push)
+
+After setting up authentication using GitHub CLI 
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/GIT AND GITHUB (master)
+$ git push -u origin master
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (19/19), 11.09 KiB | 298.00 KiB/s, done.
+Total 19 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/SooriyaRK/GitAndGithub.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/GIT AND GITHUB (master)
+$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 921 bytes | 5.00 KiB/s, done.
+From https://github.com/SooriyaRK/GitAndGithub
+   14e5b63..8d1706c  master     -> origin/master
+Updating 14e5b63..8d1706c
+Fast-forward
+ README.md | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+ create mode 100644 README.md
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/GIT AND GITHUB (master)
+$ git log --oneline
+8d1706c (HEAD -> master, origin/master) My complete git reference
+14e5b63 Git commands using git bash shell
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/GIT AND GITHUB (master)
+$ git pull
+Already up to date.
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/GIT AND GITHUB (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+
+

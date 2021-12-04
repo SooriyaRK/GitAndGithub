@@ -1,0 +1,4 @@
+Create new repository by specifiying any name in github and once it is done, we will get some commands to 
+connect and push the artifacts from the local repository to the created remote repository. We can copy the url 
+of the repository to connect local repository to remote repository and push the artifacts into 
+remote repository or to pull files from remote repository 

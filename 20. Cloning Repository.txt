@@ -1,0 +1,56 @@
+Cloning -> Copying contents (whole project) from github to our local repositories 
+In github, go to specific repository and copy the url 
+
+Command 
+-----------> 
+$ git clone repository-url  
+
+
+
+
+
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~
+$ mkdir cloned-repos
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~
+$ cd cloned-repos
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/cloned-repos
+$ ls
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/cloned-repos
+$ git clone https://github.com/SooriyaRK/GitAndGithub.git
+Cloning into 'GitAndGithub'...
+remote: Enumerating objects: 22, done.
+remote: Counting objects: 100% (22/22), done.
+remote: Compressing objects: 100% (22/22), done.
+remote: Total 22 (delta 1), reused 18 (delta 0), pack-reused 0
+Receiving objects: 100% (22/22), 11.95 KiB | 874.00 KiB/s, done.
+Resolving deltas: 100% (1/1), done.
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/cloned-repos
+$ ls
+GitAndGithub/
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/cloned-repos
+$ cd GitAndGithub
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/cloned-repos/GitAndGithub (master)
+$ ls
+'1. Introduction.txt'                                     '15. Viewing the Git Commit History.txt'  '5. Git States.txt'
+'10. Adding an existing project to a Git Repository.txt'  '16. Git Branches.txt'                    '6. Setup a Repository.txt'
+'11. Adding files to a git repository.txt'                '17. Github.txt'                          '7. Setup Name and EmailAddress for git.txt'
+'12. Committing Changes to a Git Repository.txt'          '2. Git - Version Control System.txt'     '8. Setup Git Prompt on Windows.txt'
+'13. Checking a Git Repository Status.txt'                '3. CVCS vs DVCS.txt'                     '9. Creating an empty git repository.txt'
+'14. Reverting Changes from a Git Repository.txt'         '4. Git History.txt'                       README.md
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/cloned-repos/GitAndGithub (master)
+$ ls -a
+ ./                                                       '13. Checking a Git Repository Status.txt'         '4. Git History.txt'
+ ../                                                      '14. Reverting Changes from a Git Repository.txt'  '5. Git States.txt'
+ .git/                                                    '15. Viewing the Git Commit History.txt'           '6. Setup a Repository.txt'
+'1. Introduction.txt'                                     '16. Git Branches.txt'                             '7. Setup Name and EmailAddress for git.txt'
+'10. Adding an existing project to a Git Repository.txt'  '17. Github.txt'                                   '8. Setup Git Prompt on Windows.txt'
+'11. Adding files to a git repository.txt'                '2. Git - Version Control System.txt'              '9. Creating an empty git repository.txt'
+'12. Committing Changes to a Git Repository.txt'          '3. CVCS vs DVCS.txt'                               README.md
