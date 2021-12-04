@@ -1,0 +1,259 @@
+Git Branching - one of the most powerful feature of git 
+Git branches are extremely lightweight (they have very little memory overhead or footprint and they dont take
+a lot of disk space). They are fast and efficient to make use of 
+Branches are simply a lightweight movable pointer to a commit we have made in our repository 
+
+Whenever we create a repository in git, a branch called master is created for us. As a developer, we can also 
+create new branches and update them anytime we like. 
+
+Traditionally, the master branch is treated as production branch. This means the entire code base belonging to 
+the master branch is kept production ready for deployment and no development activities are carried out here. 
+
+Anytime we want to work on a new feature or release we can create a branch and then optionally merge some or 
+all of our changes back at a later time to another branch. 
+Also if developers wanted to fix bugs or test new features they create a new branch and make changes there, 
+so as not to affect the main version of our application. Once the tested bug/feature have been added and 
+fully tested, they can be merged back into the master branch. 
+
+Bottom line : branches give flexibility to developers, allowing us to work on multiple versions of our 
+project at once, or to maintain a released production version and test versions of our app. 
+
+Commands in git bash shell 
+-----------------------------> 
+$ git branch - shows list of branches and active branch 
+$ git branch develop - Creates new branch develop and this branch inherites all the files and commits from the 
+branch from which it is created. 
+$ git checkout develop - to switch to the develop branch 
+$ git merge develop - Go to particular branch and to merge the changes from develop to that particular branch 
+$ git branch -d develop - To delete the branch develop after merging it to the required branch 
+
+
+
+
+
+
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git branch
+* master
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git branch dev-feature
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git branch
+  dev-feature
+* master
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git checkout dev-feature
+Switched to branch 'dev-feature'
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (dev-feature)
+$ git branch
+* dev-feature
+  master
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (dev-feature)
+$ git log --oneline
+322a499 (HEAD -> dev-feature, master) Commit made on dev branch
+60da086 Another commit on hobbies
+9da96ba Initial commit for hobbies
+7a3dca6 Added degree
+ff034e2 Another commit
+a684a43 Initial Commit
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (dev-feature)
+$ vi feature.txt
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (dev-feature)
+$ cat feature.txt
+New feature : Adding alert message on assignment page
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (dev-feature)
+$ git log --oneline
+322a499 (HEAD -> dev-feature, master) Commit made on dev branch
+60da086 Another commit on hobbies
+9da96ba Initial commit for hobbies
+7a3dca6 Added degree
+ff034e2 Another commit
+a684a43 Initial Commit
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (dev-feature)
+$ git status
+On branch dev-feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        feature.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (dev-feature)
+$ git add .
+warning: LF will be replaced by CRLF in feature.txt.
+The file will have its original line endings in your working directory
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (dev-feature)
+$ git commit -m "New feature added on dev-feature"
+[dev-feature 791ed00] New feature added on dev-feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (dev-feature)
+$ git status
+On branch dev-feature
+nothing to commit, working tree clean
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (dev-feature)
+$ git log --oneline
+791ed00 (HEAD -> dev-feature) New feature added on dev-feature
+322a499 (master) Commit made on dev branch
+60da086 Another commit on hobbies
+9da96ba Initial commit for hobbies
+7a3dca6 Added degree
+ff034e2 Another commit
+a684a43 Initial Commit
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (dev-feature)
+$ git checkout master
+Switched to branch 'master'
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git branch
+  dev-feature
+* master
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git log --oneline
+322a499 (HEAD -> master) Commit made on dev branch
+60da086 Another commit on hobbies
+9da96ba Initial commit for hobbies
+7a3dca6 Added degree
+ff034e2 Another commit
+a684a43 Initial Commit
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git checkout dev-feature
+Switched to branch 'dev-feature'
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (dev-feature)
+$ git branch
+* dev-feature
+  master
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (dev-feature)
+$ git branch another-feature
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (dev-feature)
+$ git branch
+  another-feature
+* dev-feature
+  master
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (dev-feature)
+$ git checkout another-feature
+Switched to branch 'another-feature'
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (another-feature)
+$ git log --oneline
+791ed00 (HEAD -> another-feature, dev-feature) New feature added on dev-feature
+322a499 (master) Commit made on dev branch
+60da086 Another commit on hobbies
+9da96ba Initial commit for hobbies
+7a3dca6 Added degree
+ff034e2 Another commit
+a684a43 Initial Commit
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (another-feature)
+$ git checkout master
+Switched to branch 'master'
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git merge dev-feature
+Updating 322a499..791ed00
+Fast-forward
+ feature.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git log --oneline
+791ed00 (HEAD -> master, dev-feature, another-feature) New feature added on dev-feature
+322a499 Commit made on dev branch
+60da086 Another commit on hobbies
+9da96ba Initial commit for hobbies
+7a3dca6 Added degree
+ff034e2 Another commit
+a684a43 Initial Commit
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git checkout dev-feature
+Switched to branch 'dev-feature'
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (dev-feature)
+$ git log --oneline
+791ed00 (HEAD -> dev-feature, master, another-feature) New feature added on dev-feature
+322a499 Commit made on dev branch
+60da086 Another commit on hobbies
+9da96ba Initial commit for hobbies
+7a3dca6 Added degree
+ff034e2 Another commit
+a684a43 Initial Commit
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (dev-feature)
+$ git checkout another-feature
+Switched to branch 'another-feature'
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (another-feature)
+$ git log --oneline
+791ed00 (HEAD -> another-feature, master, dev-feature) New feature added on dev-feature
+322a499 Commit made on dev branch
+60da086 Another commit on hobbies
+9da96ba Initial commit for hobbies
+7a3dca6 Added degree
+ff034e2 Another commit
+a684a43 Initial Commit
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (another-feature)
+$ git checkout master
+Switched to branch 'master'
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git branch
+  another-feature
+  dev-feature
+* master
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git branch -d dev-feature
+Deleted branch dev-feature (was 791ed00).
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git log --oneline
+791ed00 (HEAD -> master, another-feature) New feature added on dev-feature
+322a499 Commit made on dev branch
+60da086 Another commit on hobbies
+9da96ba Initial commit for hobbies
+7a3dca6 Added degree
+ff034e2 Another commit
+a684a43 Initial Commit
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git branch -d another-feature
+Deleted branch another-feature (was 791ed00).
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git branch
+* master
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git log --oneline
+791ed00 (HEAD -> master) New feature added on dev-feature
+322a499 Commit made on dev branch
+60da086 Another commit on hobbies
+9da96ba Initial commit for hobbies
+7a3dca6 Added degree
+ff034e2 Another commit
+a684a43 Initial Commit
+
+

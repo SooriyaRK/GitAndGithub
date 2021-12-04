@@ -1,0 +1,113 @@
+Commit History is very important in prespective of any version control system and to gain access to this commit 
+history in git, we will use git log command. Enables us to see complete history of all the commits made on 
+particular file for whole repository. And also when we copy or clone the repository, the entire commit history
+of the original repository is also available in the cloned repository. 
+
+$ git log - gives detailed information like author name 
+$ git log --oneline - (to view the git commit history in brief) 
+$ git log -n 2 - (To view the last 2 recent commits) 
+$ git log --oneline -n 2       - (To view the commit history in brief for the last 2 recent commits) 
+$ git log <filename> - To view the commits for the particular file in whole repository 
+
+
+
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git log
+commit 60da08619546f8ea53d7bc9f86f44b1380dc3957 (HEAD -> master)
+Author: RSooriya <soormo291997@gmail.com>
+Date:   Sat Dec 4 02:13:26 2021 +0530
+
+    Another commit on hobbies
+
+commit 9da96ba8340b4b97468b00adf7807900b734a2fb
+Author: RSooriya <soormo291997@gmail.com>
+Date:   Sat Dec 4 02:12:25 2021 +0530
+
+    Initial commit for hobbies
+
+commit 7a3dca6c506c72d235d6e068bacb1956322c7426
+Author: RSooriya <soormo291997@gmail.com>
+Date:   Sat Dec 4 02:10:25 2021 +0530
+
+    Added degree
+
+commit ff034e21c610e1d0509a80d10201db7d80a17c14
+Author: RSooriya <soormo291997@gmail.com>
+Date:   Sat Dec 4 01:37:51 2021 +0530
+
+    Another commit
+
+commit a684a43b2ade4ae4134d2cc0008a47b76dfc6781
+Author: RSooriya <soormo291997@gmail.com>
+Date:   Sat Dec 4 01:35:19 2021 +0530
+
+    Initial Commit
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git log --oneline
+60da086 (HEAD -> master) Another commit on hobbies
+9da96ba Initial commit for hobbies
+7a3dca6 Added degree
+ff034e2 Another commit
+a684a43 Initial Commit
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git log -n 3
+commit 60da08619546f8ea53d7bc9f86f44b1380dc3957 (HEAD -> master)
+Author: RSooriya <soormo291997@gmail.com>
+Date:   Sat Dec 4 02:13:26 2021 +0530
+
+    Another commit on hobbies
+
+commit 9da96ba8340b4b97468b00adf7807900b734a2fb
+Author: RSooriya <soormo291997@gmail.com>
+Date:   Sat Dec 4 02:12:25 2021 +0530
+
+    Initial commit for hobbies
+
+commit 7a3dca6c506c72d235d6e068bacb1956322c7426
+Author: RSooriya <soormo291997@gmail.com>
+Date:   Sat Dec 4 02:10:25 2021 +0530
+
+    Added degree
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git log --oneline -n 3
+60da086 (HEAD -> master) Another commit on hobbies
+9da96ba Initial commit for hobbies
+7a3dca6 Added degree
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git log resume.txt
+commit 7a3dca6c506c72d235d6e068bacb1956322c7426
+Author: RSooriya <soormo291997@gmail.com>
+Date:   Sat Dec 4 02:10:25 2021 +0530
+
+    Added degree
+
+commit ff034e21c610e1d0509a80d10201db7d80a17c14
+Author: RSooriya <soormo291997@gmail.com>
+Date:   Sat Dec 4 01:37:51 2021 +0530
+
+    Another commit
+
+commit a684a43b2ade4ae4134d2cc0008a47b76dfc6781
+Author: RSooriya <soormo291997@gmail.com>
+Date:   Sat Dec 4 01:35:19 2021 +0530
+
+    Initial Commit
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git log hobbies.txt
+commit 60da08619546f8ea53d7bc9f86f44b1380dc3957 (HEAD -> master)
+Author: RSooriya <soormo291997@gmail.com>
+Date:   Sat Dec 4 02:13:26 2021 +0530
+
+    Another commit on hobbies
+
+commit 9da96ba8340b4b97468b00adf7807900b734a2fb
+Author: RSooriya <soormo291997@gmail.com>
+Date:   Sat Dec 4 02:12:25 2021 +0530
+
+    Initial commit for hobbies

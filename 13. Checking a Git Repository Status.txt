@@ -1,0 +1,64 @@
+$ git status - To check the repository status 
+
+Note : 
+We can also add and commit the file at the same time by issuing below command 
+$ git commit -a -m "Another commit"
+
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos
+$ cd blank-repo
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ vi resume.txt
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ cat resume.txt
+I have two years of experience as full stack developer in cognizant
+Skills : Core Java, Spring, Spring Boot, React JS
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        resume.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git add resume.txt
+warning: LF will be replaced by CRLF in resume.txt.
+The file will have its original line endings in your working directory
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   resume.txt
+
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git commit -m "Initial Commit"
+[master (root-commit) a684a43] Initial Commit
+ 1 file changed, 2 insertions(+)
+ create mode 100644 resume.txt
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean

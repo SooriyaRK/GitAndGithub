@@ -1,0 +1,15 @@
+Git - Most popular open source version control system 
+Github - World's largest web based git repository hosting service 
+
+Core git commands 
+---------------------------> 
+1. add - adds artifact changes to index 
+2. commit - commit changes to repository 
+3. status - provides repository status 
+4. log - displays commit history 
+5. pull - pull changes from remote repo to local repo 
+6. push - pushing changes from local repo to remote repo
+
+Git download url for windows - git-scm.com 
+
+It will be downloaded automatically based on windows bit (32 or 64 bit)

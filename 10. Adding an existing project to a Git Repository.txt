@@ -1,0 +1,6 @@
+Navigate to the folder for which we want to make it a git repository and issue "git init" command 
+
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/GIT AND GITHUB
+$ git init
+Initialized empty Git repository in C:/Users/meenu/git-repos/GIT AND GITHUB/.git/

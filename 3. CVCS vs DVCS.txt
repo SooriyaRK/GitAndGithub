@@ -1,0 +1,36 @@
+Centralized Version Control System vs Distributed Version Control System 
+----------------------------------------------------------------------------> 
+CVCS - Single central server that hosts all versioned files and directories. Client software is used to 
+check out files from that central server. This has been a standard version control since a long time.  
+
+Disadvantage : 
+------------------> 
+1. Central server represents a single point of failure 
+2. If server goes down, then nobody will able to perform checkout or other VCS activities. Also in absence 
+of backup system, all the commit history would be lost. 
+
+In DVCS, the situation is quite different. Here, the client that checkout a repository from a server fully 
+mirrors that repository. 
+
+Another big difference 
+-------------------------> 
+Between Git and CVCS like subversion is the manner that each manage their own data. In subversion, the versions 
+of artifacts are managed by storing the files and their change sets or differences. 
+
+Git stores snapshots instead of file differences. Snapshot here means the state of an artifact at any point 
+of time. So when we commit our file changes, git takes the snap (or pictures) of what all the files of our 
+project looks at the moment of commit and stores a pointer to them. If a file has not changed, Git does not 
+store it again - rather it saves a reference to that file. Hence we can easily revert the entire project to 
+a different commit id (or version number) if the need arises.  
+
+Another difference 
+------------------------> 
+In git, everything is local. In CVCS like perforce, we can hardly do anything if we are not connected to the 
+server. 
+
+In CVCS, like subversion or CVS, if network connectivity is absent, we can edit files but cannot save changes 
+to them or in other words, cannot commit changes. 
+Since a local git repository is a complete clone of the remote server repository with complete commit history, 
+we can potentially do every VCS operation except pushing our changes to remote server in the absence of network
+connectivity. For eg, without internet, we can still carryout all our VCS task and then subsequently push our 
+changes whenever the network is available. 

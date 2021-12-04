@@ -1,0 +1,14 @@
+Invented by Linus Torvalds 
+Git was first created in 2005 by Linus Torvalds, the father of Linux. 
+
+Born out of necessity. The Linux project originally used Bitkeeper, a proprietary DVCS. It was initially 
+free of charge and all was well. However, when Bitkeeper moved to a paid model, the Linux project community 
+discontinued using Bitkeeper. (It needed an alternative) 
+
+Linus Torvalds made a bold move and decided to create his own version control system based on the linux project 
+community's experience with Bitkeeper. Thus, git was born. 
+
+Git came out as a fast and efficient DVCS that soon won the hearts of developers community throughout the 
+world. Indisputably, as of now, git is the most popular DVCS in the world. 
+
+Linus Torvalds - father of linux, Inventor of git 

@@ -1,0 +1,24 @@
+$ git commit -m "Initial commit" 
+
+-m - optional flag to add inline message  
+
+
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/GIT AND GITHUB (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 136d756] Initial commit
+ 9 files changed, 398 insertions(+)
+ create mode 100644 1. Introduction.txt
+ create mode 100644 2. Git - Version Control System.txt
+ create mode 100644 3. CVCS vs DVCS.txt
+ create mode 100644 4. Git History.txt
+ create mode 100644 5. Git States.txt
+ create mode 100644 6. Setup a Repository.txt
+ create mode 100644 7. Setup Name and EmailAddress for git.txt
+ create mode 100644 8. Setup Git Prompt on Windows.txt
+ create mode 100644 9. Creating an empty git repository.txt
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/GIT AND GITHUB (master)
+$ git status
+On branch master
+nothing to commit, working tree clean

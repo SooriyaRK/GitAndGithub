@@ -1,0 +1,16 @@
+Every artifact (file/directory) of a project or repository under git version control generally has to go 
+through three states or phases if we want to add it to a repository. 
+
+1. Modified state - an artifact gets modified and saved in the file system under the operating system that 
+the user is using. However the changes in the artifact have not been committed or saved to the git 
+database yet. 
+
+2. Staged state - a modified artifact is marked in its current version to go into the next commit snapshot. 
+The term snapshot points to the state of an artifact at any point of time. 
+"git add" command is used here 
+
+3. Committed state - the artifact is stored in the local git database 
+"git commit" command is used here 
+
+So, the artifact moves from modified and then to staged and finally to the committed state as the artifact is 
+ultimately saved in the git repository. 

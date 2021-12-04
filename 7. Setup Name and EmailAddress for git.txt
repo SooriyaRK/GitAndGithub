@@ -1,0 +1,56 @@
+Gitbash - command line terminal for git 
+
+To check the present directory 
+$ pwd (check whether it is in home directory ie. Users/Meenu) 
+
+To see whether the configuration file has been initialized 
+$ git config --global --list 
+
+If no config file, shows error displaying 
+fatal: unable to read config file 'C:/Users/meenu/.gitconfig': No such file or directory
+
+If not configured, then we have to configure 
+$ git config --global user.name "RSooriya" 
+
+It will create entry in git config file if the file already exists, or create new one  
+$ git config --global --list 
+It will list the config file with username 
+
+$ git config --global user.email "soormo291997@gmail.com" 
+$git config --global --list 
+
+List the config file with username and email 
+
+$ vi ~/.gitconfig        - Opens up the gitconfig file and we can edit the file if needed  
+To quit, type :q and enter 
+
+$ cat ~/.gitconfig       - To list the file 
+
+Various type of configuration file git uses : 
+--------------------------------------------------> 
+1. System 
+2. Global 
+3. Local 
+
+System 
+---------> 
+Configuration value in this file are applied to all users on the machine and for all their repositories. The 
+first place git looks for these values is in the /etc/.gitconfig file. This configuration file is rarely used
+though. 
+
+Global (already updated) 
+-----------------------------> 
+Configuration value in this file are applied to a single user and to all repositories belonging to that user. 
+This file is located at ~/.gitconfig. This file can be used to overwrite configuration values set in System 
+configuration file. 
+
+Local 
+----------> 
+Values in this file apply to just a single repository. This file is located in a subfolder for a particular 
+repository at .git folder in a file called config. This file can be used to overwrite configuration values 
+set in the System or Global configuration file. If this file were committed to the repository, then the 
+settings contained would impact all users that clone this repository. 
+
+Each of these values (System, Global, Local) overwrites value in previous levels. 
+
+

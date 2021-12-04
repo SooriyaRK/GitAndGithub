@@ -1,0 +1,5 @@
+Github - World's largest web based git repository hosting service 
+Its purpose is to allow us create and maintain repositories on their website and then allows us to perform all 
+git related operations. 
+
+Great thing we can do - integrate our local repository with github repository

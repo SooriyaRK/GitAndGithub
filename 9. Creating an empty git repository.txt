@@ -1,0 +1,165 @@
+1. $ pwd - to check the current directory 
+2. $ mkdir git-repos - to create folder that keeps all git repositories 
+3. $ cd git-repos - navigate into the folder 
+4. $ mkdir blank-repo - subfolder under git-repos 
+5. $ cd blank-repo - to navigate into the folder 
+6. $ git init - Initializing the git repository for blank-repo folder (it will become master branch) 
+(This will also creates subfolder .git inside the folder blank-repo)
+
+and alternatively we can create git repository by 
+cd .. 
+goes to previous folder git-repos (folder where all git repositories are present) 
+
+6. $ git init blank-repo (This will create new folder at the same time initializing the folder as 
+git repository) 
+7. $ cd blank-repo - navigate into the folder 
+8. $ ls -al (to list the files and folders under the blank-repo) 
+
+. - hard link to itself 
+.. - hard link to the directory 
+.git (hidden folder and the heart of the git repository)
+9. $ cd .git - navigate to the folder .git 
+10. $ ls - al - list all the files and folders under .git 
+(It has directories for managing version control capabilities of git)
+
+
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~
+$ pwd
+/c/Users/meenu
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~
+$ mkdir git-repos
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~
+$ cd git-repos
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos
+$ pwd
+/c/Users/meenu/git-repos
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos
+$ mkdir blank-repo
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos
+$ cd blank-repo
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo
+$ pwd
+/c/Users/meenu/git-repos/blank-repo
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo
+$ git init
+Initialized empty Git repository in C:/Users/meenu/git-repos/blank-repo/.git/
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ ls -al
+total 4
+drwxr-xr-x 1 meenu 197121 0 Dec  3 19:02 ./
+drwxr-xr-x 1 meenu 197121 0 Dec  3 19:02 ../
+drwxr-xr-x 1 meenu 197121 0 Dec  3 19:02 .git/
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ ls -l
+total 0
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ ls -a
+./  ../  .git/
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ cd .git
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo/.git (GIT_DIR!)
+$ pwd
+/c/Users/meenu/git-repos/blank-repo/.git
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo/.git (GIT_DIR!)
+$ ls -al
+total 11
+drwxr-xr-x 1 meenu 197121   0 Dec  3 19:02 ./
+drwxr-xr-x 1 meenu 197121   0 Dec  3 19:02 ../
+-rw-r--r-- 1 meenu 197121 130 Dec  3 19:02 config
+-rw-r--r-- 1 meenu 197121  73 Dec  3 19:02 description
+-rw-r--r-- 1 meenu 197121  23 Dec  3 19:02 HEAD
+drwxr-xr-x 1 meenu 197121   0 Dec  3 19:02 hooks/
+drwxr-xr-x 1 meenu 197121   0 Dec  3 19:02 info/
+drwxr-xr-x 1 meenu 197121   0 Dec  3 19:02 objects/
+drwxr-xr-x 1 meenu 197121   0 Dec  3 19:02 refs/
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo/.git (GIT_DIR!)
+$ cat config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo/.git (GIT_DIR!)
+$ cd ..
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ cd ..
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos
+$ pwd
+/c/Users/meenu/git-repos
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos
+$ git init another_blank_repo
+Initialized empty Git repository in C:/Users/meenu/git-repos/another_blank_repo/.git/
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos
+$ ls -al
+total 20
+drwxr-xr-x 1 meenu 197121 0 Dec  3 19:05 ./
+drwxr-xr-x 1 meenu 197121 0 Dec  3 19:04 ../
+drwxr-xr-x 1 meenu 197121 0 Dec  3 19:05 another_blank_repo/
+drwxr-xr-x 1 meenu 197121 0 Dec  3 19:02 blank-repo/
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos
+$ cd another_blank_repo
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/another_blank_repo (master)
+$ ls -al
+total 4
+drwxr-xr-x 1 meenu 197121 0 Dec  3 19:05 ./
+drwxr-xr-x 1 meenu 197121 0 Dec  3 19:05 ../
+drwxr-xr-x 1 meenu 197121 0 Dec  3 19:05 .git/
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/another_blank_repo (master)
+$ cd .git
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/another_blank_repo/.git (GIT_DIR!)
+$ ls -al
+total 11
+drwxr-xr-x 1 meenu 197121   0 Dec  3 19:05 ./
+drwxr-xr-x 1 meenu 197121   0 Dec  3 19:05 ../
+-rw-r--r-- 1 meenu 197121 130 Dec  3 19:05 config
+-rw-r--r-- 1 meenu 197121  73 Dec  3 19:05 description
+-rw-r--r-- 1 meenu 197121  23 Dec  3 19:05 HEAD
+drwxr-xr-x 1 meenu 197121   0 Dec  3 19:05 hooks/
+drwxr-xr-x 1 meenu 197121   0 Dec  3 19:05 info/
+drwxr-xr-x 1 meenu 197121   0 Dec  3 19:05 objects/
+drwxr-xr-x 1 meenu 197121   0 Dec  3 19:05 refs/
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/another_blank_repo/.git (GIT_DIR!)
+$ cd ..
+
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/another_blank_repo (master)
+$ ls -al
+total 4
+drwxr-xr-x 1 meenu 197121 0 Dec  3 19:05 ./
+drwxr-xr-x 1 meenu 197121 0 Dec  3 19:05 ../
+drwxr-xr-x 1 meenu 197121 0 Dec  3 19:05 .git/
+
+
+
+
+
+
+
+

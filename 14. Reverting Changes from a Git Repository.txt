@@ -1,0 +1,122 @@
+1. When we have modified the existing files, but still didnt added the file to index. We can revert the changes by 
+doing as below 
+$ git checkout -- <filename> 
+or 
+$ git restore -- <filename> 
+
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ ls
+resume.txt
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ vi resume.txt
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   resume.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git checkout -- resume.txt
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean 
+
+2. When we have added the file to index but still didnt committed the file. We can revert the changes by doing 
+as below 
+git reset HEAD <filename> 
+or 
+git restore --staged <filename>  
+
+
+3. If we have created new file and still havent added the file to index or committed the file, we can remove
+the file directly by providing below command 
+$ rm <filename>
+
+
+
+
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ vi resume.txt
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   resume.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git add resume.txt
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   resume.txt
+
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git reset HEAD resume.txt
+Unstaged changes after reset:
+M       resume.txt
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   resume.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git add .
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   resume.txt
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git restore --staged resume.txt
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   resume.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git checkout -- resume.txt
+
+meenu@LAPTOP-IJEV9H03 MINGW64 ~/git-repos/blank-repo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+

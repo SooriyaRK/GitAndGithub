@@ -1,0 +1,18 @@
+Version Control System (useful to developers) 
+
+VCS - software that can store and maintain information about each and every change made to files and directories
+(also called as artifacts) and these files and directories are brought under its control against a specific 
+version number(this is called commit history). We can switch to a particular version in the commit history 
+at any point of time. 
+
+1. Very useful if we find that some recent changes in our project have introduced bugs (or) some other problems 
+in our project. 
+2. Also in the case of company with many developers, we can find version specific information about any file, 
+such as who made the change, when the change was made and what code was changed easily using VCS. 
+3. Comparing versions between different files sometimes prove extremely useful (particularly when debugging 
+a issue even if the code was changed by other developers) 
+
+Not just for developers. People in related role such as graphic web designer can benefit by storing different 
+versions of image, layout etc., 
+
+Generally, a person who wants to store multiple versions of a file will find version control system useful.

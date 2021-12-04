@@ -1,0 +1,16 @@
+On Windows, the git-bash shell that got installed when Git was installed earlier will be used when we are using 
+git at the command line. 
+
+It's possible to use the Windows DOS/Command Prompt and in fact option was given for us to select this 
+when Git was installed, but that's not an recommended way. 
+
+The git-bash shell for Windows, among other things, lets us use standard linux commands that usually don't work 
+in a Windows command prompt, so this is the ideal one. 
+
+Some basic linux commands 
+--------------------------------> 
+mkdir - to create a new folder or directory 
+cd - to set the path 
+ls - to list the files under the directory (keep the path set and type ls, it will list the files and 
+subdirectory under the directory) 
+ls -l  - list the files in detailed manner 

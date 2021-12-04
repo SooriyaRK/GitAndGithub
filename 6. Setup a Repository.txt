@@ -1,0 +1,20 @@
+Three methods : 
+---------------------> 
+1. From scratch 
+2. From an existing project 
+3. Cloning remote repository 
+
+i. From scratch 
+------------------> 
+By executing the "git init" command in an empty folder which will become the root directory of our repository. 
+This will create a blank repository which later we can add new artifacts to. 
+
+ii. From an existing project 
+--------------------------------> 
+For an existing project folder with related files and directories we can issue the "git init" command to 
+create the repository. Now the project artifacts will be brought under git version control. 
+
+iii. Cloning remote repository 
+-------------------------------------> 
+Lastly, we can clone a remote repository from a remote server. For eg, from github to our local machine. 
+Github, is arguably the most popular web based git repository hosting service in the world. 
